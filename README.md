@@ -4,7 +4,8 @@
 
 
 ## API endpoints
-- `GET /search?q=<query>&page=<page>&limit=<limit>` Search the messages
+Search the messages
+- `GET /search?q=<query>&page=<page>&limit=<limit>`
 
 
 ## Current implementation
@@ -64,4 +65,12 @@ gcloud run deploy aurora-backend \
 
 
 ## Testing
-curl "http://localhost:8000/search?q=test&page=1&page_size=10"
+Test locally
+```
+curl "http://localhost:8080/search?query=Paris&page=1&page_size=10"
+```
+
+Test using the app url
+```
+curl "https://aurora-backend-74rkjr5a6a-ew.a.run.app/search?query=Paris&page=1&page_size=10"
+```
